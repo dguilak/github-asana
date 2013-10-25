@@ -3,7 +3,7 @@
  */
 
 var express = require('express')
-  , github_asana = require('./lib/github-asana');
+  , github_asana = require('./lib/github2-asana');
 
 var app = module.exports = express.createServer();
 
@@ -29,5 +29,5 @@ app.post('/', github_asana.index);
 
 var port = process.env.PORT || 3000;
 app.listen(port, function() {
-  console.log("Lerstening on " + port);
+  console.log("Listening on " + port);
 });
